@@ -1,6 +1,9 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\Black-Jack",
+    "\\Tic-Tac-Toe"
   ],
+  "SelectedNode": "\\Tic-Tac-Toe\\never_loose.py",
   "PreviewInSolutionExplorer": false
 }
