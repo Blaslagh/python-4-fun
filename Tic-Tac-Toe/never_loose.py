@@ -59,26 +59,28 @@ def show(table):
             print("[",i,"]", end = '')
         if c%3==2:
             print()
+    return
 
-count = 9
-tab = [ '' ] * 9
+free_cells = 9
+table = [ '' ] * 9
 print("Let's play!\n")
-while '' in tab:
-    show(tab)
+
+while '' in table:
+    show(table)
     try:
-        i=int(input("No of field to make move: "))
-        tab[ i-1 ] = 'O'
-        count -= 1
+        i=int(input("Number of field to make move: "))
+        table[ i-1 ] = 'O'
+        free_cells -= 1
     except:
         continue
-    show(tab)
+    show(table)
     print()
  
-    x=divide(tab,count)
-    count -= 1
+    x=divide(table,free_cells)
+    free_cells -= 1
     if x!=0:
         print(x)
-        tab=x
+        table=x
     else: 
         print("Impossibru")
         break
