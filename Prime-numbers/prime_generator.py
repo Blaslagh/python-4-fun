@@ -9,7 +9,7 @@ import time, sys, math
 
 start_time=time.gmtime()
 
-tests=[1, 66750000]
+tests=[1, 1000, 10000, 100000, 1000000, 10000000]
 
 try:
     name_of_file = 'primes_list.txt'
@@ -38,21 +38,22 @@ print("Uploaded from file:",name_of_file, how_much_in_table, "prime numbers\nTim
 
 last_checked_number = prime_list[how_much_in_table-1]
 
+file=open( name_of_file, 'a')
  
 while how_much_in_table < how_much_wanted:
-    last_checked_number += 2
+    checked_number = last_checked_number + 2
     is_prime=True
-    squared_number = int(math.sqrt(last_checked_number))
+    squared_number = int(math.sqrt(checked_number))
     for i in prime_list:
-        if (last_checked_number % i) == 0:
+        if (checked_number % i) == 0:
             is_prime = False
             break
-        if i>squared_number:
+        if i > squared_number:
             break
-
+    last_checked_number = checked_number
     if is_prime:
-
-        open( name_of_file, 'a' ).write(str(last_checked_number)+'\n')
+        prime_list.append(last_checked_number)
+        file.write(str(last_checked_number)+'\n')
         how_much_in_table += 1
-        if how_much_in_table % 1000 == 0:
+        if how_much_in_table%10000==0:
             print(str(how_much_in_table)+' '+str(last_checked_number))
