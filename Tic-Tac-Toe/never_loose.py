@@ -25,7 +25,7 @@ def predict(table, co):
 
 
             
-def divide(table, co):
+def divide(table, co):      #Problem somewhere here
     l={}
     for c,i in enumerate(table):
         if i=='':
