@@ -1,31 +1,22 @@
-def lost(table):
+def won(table, sign):
     for i in range(1,4):
-        if (table[3*(i-1)]=='O' and table[3*(i-1)+1]=='O' and table[3*(i-1)+2]=='O' ) or (table[i-1]=='O' and table[ i+2]=='O' and table[i+5]=='O'): 
+        if (table[3*(i-1)]==sign and table[3*(i-1)+1]==sign and table[3*(i-1)+2]==sign ) or (table[i-1]==sign and table[ i+2]==sign and table[i+5]==sign): 
             return True
-    if (table[0]=='O' and table[4]=='O' and table[8]=='O') or (table[2]=='O' and table[4]=='O' and table[6]=='O'):
-        return True
-    return False
-
-def won(table):
-    for i in range(1,4):
-        if (table[3*(i-1)]=='X' and table[3*(i-1)+1]=='X' and table[3*(i-1)+2]=='X' ) or (table[i-1]=='X' and table[ i+2]=='X' and table[i+5]=='X'): 
-            return True
-    if (table[0]=='X' and table[4]=='X' and table[8]=='X') or (table[2]=='X' and table[4]=='X' and table[6]=='X'):
+    if (table[0]==sign and table[4]==sign and table[8]==sign) or (table[2]==sign and table[4]==sign and table[6]==sign):
         return True
     return False
 
 
-def predict(table, co):
+def predict(table, co, sign):
     if co == 0:
-        if lost(table): 
-            return -1
-        elif won(table):
-            return +1
+        if won(table, sing):
+            return 1
     return 0
 
 
             
 def divide(table, co):      #Problem somewhere here
+    if co>
     l={}
     for c,i in enumerate(table):
         if i=='':
