@@ -9,37 +9,14 @@ def won(table, sign):
 
 def predict(table, co, sign):
     if co == 0:
-        if won(table, sing):
+        if won(table, sign):
             return 1
     return 0
 
 
             
 def divide(table, co):      #Problem somewhere here
-    if co>
-    l={}
-    for c,i in enumerate(table):
-        if i=='':
-            l[c]=0
-
-    for i in l.keys():
-
-        tab_predict=table
-
-        if co % 2 == 0:
-            tab_predict[i]='X'
-        else:
-            tab_predict[i]='O'
-        if predict(tab_predict, co-1)<1:
-            l[i]-=predict(tab_predict, co-1)
-
-    best = table
-    if co % 2 == 0:
-        best[min(l, key=l.get)] = 'X'
-    else:
-        best[min(l, key=l.get)] = 'O'
-    
-    return best
+    #I need to write that function once again
 
 
 def show(table):
