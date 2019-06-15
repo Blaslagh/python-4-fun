@@ -1,3 +1,5 @@
+from random import randint
+
 def won(table, sign):
     for i in range(1,4):
         if (table[3*(i-1)]==sign and table[3*(i-1)+1]==sign and table[3*(i-1)+2]==sign ) or (table[i-1]==sign and table[ i+2]==sign and table[i+5]==sign): 
@@ -7,16 +9,9 @@ def won(table, sign):
     return False
 
 
-def predict(table, co, sign):
-    if co == 0:
-        if won(table, sign):
-            return 1
-    return 0
-
-
             
-def divide(table, co):      #Problem somewhere here
-    #I need to write that function once again
+def move(table, free_cells, comp_sign):
+    #Aaaaaaaaaa
 
 
 def show(table):
@@ -28,27 +23,3 @@ def show(table):
         if c%3==2:
             print()
     return
-
-free_cells = 9
-table = [ '' ] * 9
-print("Let's play!\n")
-
-while '' in table:
-    show(table)
-    try:
-        i=int(input("Number of field to make move: "))
-        table[ i-1 ] = 'O'
-        free_cells -= 1
-    except:
-        continue
-    show(table)
-    print()
- 
-    x=divide(table,free_cells)
-    free_cells -= 1
-    if x!=0:
-        print(x)
-        table=x
-    else: 
-        print("Impossibru")
-        break

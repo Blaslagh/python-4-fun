@@ -1,0 +1,15 @@
+{
+  "version": "0.2.1",
+  "tasks": [
+    {
+      "taskName": "zadanie-never_loose",
+      "appliesTo": "Tic-Tac-Toe/never_loose.py",
+      "type": "default"
+    },
+    {
+      "taskName": "zadanie-main",
+      "appliesTo": "Tic-Tac-Toe/main.py",
+      "type": "launch"
+    }
+  ]
+}
