@@ -1,6 +1,6 @@
 from random import randint
 
-def won(table, sign):
+def won(table, sign):   #works fine
     for i in range(1,4):
         if (table[3*(i-1)]==sign and table[3*(i-1)+1]==sign and table[3*(i-1)+2]==sign ) or (table[i-1]==sign and table[ i+2]==sign and table[i+5]==sign): 
             return True
@@ -10,9 +10,15 @@ def won(table, sign):
 
 
             
-def move(table, free_cells, comp_sign):
-    #Aaaaaaaaaa
-
+def move(table, free_cells, comp_sign): #Aaaaa
+    if free_cells % 2 == 1:
+        temp_sign = 'X'
+    else:
+        temp_sign = 'O'
+    for c, i in enumerate(table):
+        if i != '':
+            continue
+        print("Dupa") #Recursive algorithm to avoid loosing
 
 def show(table):
     for c, i in enumerate(table):
