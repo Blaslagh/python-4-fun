@@ -9,7 +9,7 @@ import time, sys, math
 
 start_time=time.gmtime()
 
-tests=[1, 1000, 10000, 100000, 1000000, 10000000]
+tests=[1, 1000, 10000, 100000, 1000000, 1200000]
 
 try:
     name_of_file = 'primes_list.txt'
