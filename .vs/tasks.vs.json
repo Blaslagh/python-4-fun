@@ -10,6 +10,11 @@
       "taskName": "zadanie-main",
       "appliesTo": "Tic-Tac-Toe/main.py",
       "type": "launch"
+    },
+    {
+      "taskName": "module",
+      "appliesTo": "Tic-Tac-Toe/module.py",
+      "type": "default"
     }
   ]
 }
