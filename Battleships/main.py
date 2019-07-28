@@ -65,7 +65,8 @@ class Player:
         else:
             for i in range(size):
                 if x_num+i>9 or '.' not in self.field[self.table[x_num+i]][y]:
-                    print("You can't put your's ship here")
+                    if show == True: 
+                        print("You can't put your's ship here")
                     return
                  
             for i in range(size):
