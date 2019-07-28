@@ -11,7 +11,7 @@ class Player:
         self.hp=20
         self.dd=['H','V']
 
-    def place(self, size, coordinates, direction='V'):
+    def place(self, size, coordinates, direction='V', show=False):
         try:
             size=int(size)
         except:
@@ -36,7 +36,8 @@ class Player:
         if direction.upper().startswith('V'):
             for i in range(size):
                 if int(y)+i>10 or '.' not in self.field[x][str(int(y)+i)]:
-                    print("You can't put your's ship here")
+                    if show == True: 
+                        print("You can't put your's ship here")
                     return
 
             for i in range(size):
@@ -131,7 +132,7 @@ def game2players():
             coord=input("Coordinates of ship's head (ex. 'A 1'): ")
             dire=input("Direction(h/v): ")
             if dire=='':
-                player_1.place(c+1, coord)
+                player_1.place(c+1, coord, 'V', True)
             else:
                 player_1.place(c+1, coord, dire)
 
@@ -143,7 +144,7 @@ def game2players():
             coord=input("Coordinates of ship's head (ex. 'A 1'): ")
             dire=input("Direction(h/v): ")
             if dire=='':
-                player_2.place(c+1, coord)
+                player_2.place(c+1, coord, 'V', True)
             else:
                 player_2.place(c+1, coord, dire)
 
@@ -181,7 +182,7 @@ def game1player():
             coord=input("Coordinates of ship's head (ex. 'A 1'): ")
             dire=input("Direction(h/v): ")
             if dire=='':
-                player.place(c+1, coord)
+                player.place(c+1, coord, 'V', True)
             else:
                 player.place(c+1, coord, dire)
 

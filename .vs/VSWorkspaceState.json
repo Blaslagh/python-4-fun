@@ -1,10 +1,11 @@
 {
   "ExpandedNodes": [
     "",
+    "\\Battleships",
     "\\Black-Jack",
     "\\Prime-numbers",
     "\\Tic-Tac-Toe"
   ],
-  "SelectedNode": "\\.gitattributes",
+  "SelectedNode": "\\Tic-Tac-Toe\\main.py",
   "PreviewInSolutionExplorer": false
 }
