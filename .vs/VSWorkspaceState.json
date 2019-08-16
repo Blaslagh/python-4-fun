@@ -3,9 +3,10 @@
     "",
     "\\Battleships",
     "\\Black-Jack",
+    "\\Evolution-Simulator",
     "\\Prime-numbers",
     "\\Tic-Tac-Toe"
   ],
-  "SelectedNode": "\\Tic-Tac-Toe\\main.py",
+  "SelectedNode": "\\Evolution-Simulator\\main.py",
   "PreviewInSolutionExplorer": false
 }
