@@ -258,5 +258,13 @@ def quick_game():
     else:
         print("Computer wins")
 
-
-quick_game()
+def play():
+    c = input("q - quick game, random ships positions\ns - player vs computer\nd - player vs player\ne - exit").upper()
+    while c!="E":
+        if c == 'Q': quick_game()
+        elif c == 'S': game1player()
+        elif c == 'D': game2players()
+        else:
+            print("Pick one option")
+        c = input("q - quick game, random ships positions\ns - player vs computer\nd - player vs player\ne - exit").upper()
+    return 0

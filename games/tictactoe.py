@@ -95,7 +95,9 @@ def game(sign, free_cells=9):
             return "Draw!"
     return 0
 
-while True:
-    game(start())
-    if not playAgain():
-        break
+def play():
+    while True:
+        game(start())
+        if not playAgain():
+            break
+    return 0

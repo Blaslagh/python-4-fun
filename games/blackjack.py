@@ -1,8 +1,4 @@
-def begin():
-    print("Welcome in Casino de Royal\n\nYou start with 100$\nAre you familiar with Black Jack rules?\n\nWe are playing with one deck of cards.\nTo win you need to achive higer score than The Dealer,\n but not greater then 21.\nIn case of draw, nobody wins.")
-    
-
-class player:
+class Player:
     def __init__(self):
         self.cards = []
         self.sum = 0
@@ -24,6 +20,7 @@ class player:
             if self.ace:
                 self.sum-=10
         self.cards.append(values[val]+' of '+col)
+        print(values[val]+' of '+col)
 
     def bet(self):
         print("Money:",self.money)
@@ -41,9 +38,9 @@ class player:
             m=input("h to hit, s to stand, q to quit").lower()
             if m in ['h','s','q']:
                 return m
+        return
 
-
-class croupier:
+class Croupier:
     def __init__(self):
         self.cards = []
         self.sum = 0
@@ -76,12 +73,11 @@ class croupier:
         for i in self.cards:
             print(i)
 
-
 def play():
-    begin()
+    print("Welcome in Casino de Royal\n\nYou start with 100$\nAre you familiar with Black Jack rules?\n\nWe are playing with one deck of cards.\nTo win you need to achive higer score than The Dealer,\n but not greater then 21.\nIn case of draw, nobody wins.")
     input("Press Enter to continue")
-    Cro = croupier()
-    pl = player()
+    Cro = Croupier()
+    pl =Player()
     move='h'
     while move!='q':
         move='h'
@@ -129,3 +125,4 @@ def play():
         if pl.money==0:
             print("You lost all money! \n\nTake this 100$ if you want to play again.")
             pl.money = 100
+    return 0
