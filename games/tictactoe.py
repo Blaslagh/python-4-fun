@@ -79,7 +79,10 @@ def game(sign, free_cells=9):
             i=int(input("Number of field to make move: "))
         tab[ i-1 ] = sign
         free_cells -= 1
-
+        if won(tab, sign):
+            show(tab)
+            print("You won!")
+            break
         if free_cells>0:
             x=move(tab, free_cells, comp_sign, sign)
             tab[x]=comp_sign
@@ -87,7 +90,7 @@ def game(sign, free_cells=9):
 
         if won(tab, comp_sign):
             show(tab)
-            return "You lost!" 
+            print("You lost!")
             break
 
         if free_cells == 0:

@@ -1,12 +1,10 @@
 {
   "ExpandedNodes": [
     "",
-    "\\Battleships",
-    "\\Black-Jack",
     "\\Evolution-Simulator",
-    "\\Prime-numbers",
-    "\\Tic-Tac-Toe"
+    "\\games",
+    "\\Prime-numbers"
   ],
-  "SelectedNode": "\\Evolution-Simulator\\main.py",
+  "SelectedNode": "\\games\\main.py",
   "PreviewInSolutionExplorer": false
 }
