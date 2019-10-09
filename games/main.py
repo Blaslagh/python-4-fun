@@ -14,3 +14,5 @@ while True:
             battleships.play()
     except:
         if game.upper()=='Q': break
+
+#  adam@iwanicki.design
